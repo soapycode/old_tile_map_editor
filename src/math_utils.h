@@ -1,0 +1,90 @@
+#ifndef MATH_UTILS_H_
+#define MATH_UTILS_H_
+
+struct Point2
+{
+    int32 x, y;
+};
+
+struct Vector2
+{
+    //TODO: change these to floats?
+    int x;
+    int y;
+
+    Vector2 operator+(const Vector2 & right)
+    {
+	Vector2 result = {};
+
+	result.x = this->x + right.x;
+	result.y = this->y + right.y;
+
+	return result;
+    }
+    
+    Vector2 operator-(const Vector2 & right)
+    {
+	Vector2 result = {};
+	
+	result.x = this->x - right.x;
+	result.y = this->y - right.y;
+	
+	return result;
+    }
+
+    //TODO: change into float math?
+    Vector2 operator*(const int scalar)
+    {
+	Vector2 result = {};
+	
+	result.x = this->x * scalar;
+	result.y = this->y * scalar;
+	
+	return result;
+    }
+    
+    //TODO: change this into float math and call operator* with 1/scalar?
+    Vector2 operator/(const int scalar)
+    {
+	Vector2 result = {};
+	
+	result.x = this->x / scalar;
+	result.y = this->y / scalar;
+	
+	return result;
+    }
+
+    Vector2 & operator=(const Vector2 & right)
+    {
+	this->x = right.x;
+	this->y = right.y;
+
+	return *this;
+    }
+
+    bool operator!=(const Vector2 right)
+    {
+	return this->x != right.x || this->y != right.y;
+    }
+};
+
+
+inline int absValue(int value)
+{
+    return value >= 0? value:-value;
+}
+
+//TODO: there is a faster way I'm pretty sure
+inline int exponent(int base, int power)
+{
+    int result = 1;
+    
+    for (int i = 0; i < power; ++i)
+    {
+	result *= base;
+    }
+
+    return result;
+}
+
+#endif
