@@ -19,6 +19,6 @@ Programmed in C/C++ using the SDL2 library.
 - save tile maps in a simple custom file format to use directly in your game, or to load back into the program later for further editing
 
 ### Screenshots / GIFs
-![Screenshot of app](/screenshot1.png?raw=true "App Screenshot")
-![gif of app](/gif1.gif?raw=true "App gif")
-![gif of app](/gif2.gif?raw=true "App gif")
+![Screenshot of app](images/screenshot1.png?raw=true "App Screenshot")
+![gif of app](images/gif1.gif?raw=true "App gif")
+![gif of app](images/gif2.gif?raw=true "App gif")
